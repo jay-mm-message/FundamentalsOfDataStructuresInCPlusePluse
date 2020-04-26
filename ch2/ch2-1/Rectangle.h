@@ -12,6 +12,7 @@ class Rectangle {
         int GetWidth() const;
         
         bool operator==(const Rectangle& s);
+        bool operator < (const Rectangle& s);
         friend std::ostream& operator<< (std::ostream& out, const Rectangle& rt);
     private:
         int x1, y1, h, w;

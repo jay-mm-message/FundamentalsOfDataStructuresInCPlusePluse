@@ -37,3 +37,15 @@ std::ostream& operator<< (std::ostream& out, const Rectangle& rt) {
 
     return out;
 }
+
+bool Rectangle::operator < (const Rectangle& s) {
+    
+    int r_area = this->GetHeight() * this->GetWidth();
+    int s_area = s.GetHeight() * s.GetWidth();
+
+    if (r_area < s_area) {
+        return true;
+    }
+
+    return false;
+}
